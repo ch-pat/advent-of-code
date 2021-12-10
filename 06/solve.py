@@ -1,4 +1,4 @@
-input_file = "6/input"
+input_file = "06/input"
 
 with open(input_file, "r") as f:
     data = f.read().splitlines()
