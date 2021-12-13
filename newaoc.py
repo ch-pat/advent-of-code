@@ -2,15 +2,16 @@
 import os, argparse
 
 parser = argparse.ArgumentParser(description='Prepare directory for the next advent of code problem')
-parser.add_argument('Year', metavar='N', type=int, nargs='?',
+parser.add_argument('Year', metavar='Year', type=int, nargs='?',
                     help='Year for which you are creating a new problem directory')
 
-year = str(parser.parse_args().Year)
+year = parser.parse_args().Year
 
 if not year:
     print("No year specified. Please specify a year.")
     exit()
 
+year = str(year)
 if year not in os.listdir():
     os.mkdir(year)
     problem = "01"
